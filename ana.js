@@ -7,18 +7,29 @@ const m=strs.map((e)=>(
 
 console.log(strs, m)
 
-let prev=""
+let ant=null
+let i=0
+m.forEach((e,index)=>{
+    //e!=ant ? ana.push(e) : ant=e
+//    if (e=ant) ana.push(e)
+    if (e != ant) ana.push(e)
+    ant=e
+    console.log(e, index, ant)
+//ant=e
+})
+console.log(ana)
+/* let prev=""
 let grouped=[]
 const red=m.reduce((grouped, a, index)=>{
     if (prev!=a) grouped[index]=[]
-    //prev!=a ? grouped=[] : grouped.push(a)
+    prev!=a ? grouped=[] : grouped.push(a)
     grouped[index].push(a)
     
     console.log(` ${grouped} ${a}  ${index} `)
     prev=a
     
 },[])
-
+ */
 /* m.forEach((e, index)=>{
     console.log(m.reduce((e,a,i)=>{
         e===a ?  e : ''
