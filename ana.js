@@ -5,19 +5,31 @@ const m=strs.map((e)=>(
   e.split('').sort().join(''))
 )
 
+//explanation https://delacruz.dev/blog/funcion-reduce-javascript
+
 console.log(strs, m)
 
 let ant=null
 let i=0
+
+/* const tt=m.reduce((acu, curr)=>{
+    return acu = [].push(curr)
+    console.log(acu)
+}, [])
+
+console.log(tt) */
+
 m.forEach((e,index)=>{
-    //e!=ant ? ana.push(e) : ant=e
-//    if (e=ant) ana.push(e)
-    if (e != ant) ana.push(e)
-    ant=e
-    console.log(e, index, ant)
-//ant=e
+
+    /* if (e != ant) {
+        ana.push(e)
+        ant=e
+    }
+    console.log(e, index, ant) */
+
 })
 console.log(ana)
+
 /* let prev=""
 let grouped=[]
 const red=m.reduce((grouped, a, index)=>{
