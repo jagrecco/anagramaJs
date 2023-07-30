@@ -9,27 +9,41 @@ const m=strs.map((e)=>(
 
 console.log(strs, m)
 
-let ant=null
-let i=0
-
 /* const tt=m.reduce((acu, curr)=>{
     return acu = [].push(curr)
     console.log(acu)
 }, [])
 
 console.log(tt) */
+/* m.reduce((acum, curr, index)=>{
+
+}) */
+
+//act=[].push(curr)
+/* console.log(m.shift())
+console.log(m) */
+let temp=null
+
+
+let anti=null
 
 m.forEach((e,index)=>{
+    
+    if (index == m.indexOf('aet', index)) ana.push(strs[index]) //funciona!
+    //console.log(e, index)
+    
+    /* (e!=ant) ? console.log('distinto') : console.log('igual')
 
+    console.log(ant, e, index)
+    ant=e */
     /* if (e != ant) {
         ana.push(e)
         ant=e
     }
     console.log(e, index, ant) */
-
+    
 })
-console.log(ana)
-
+console.log(ana);
 /* let prev=""
 let grouped=[]
 const red=m.reduce((grouped, a, index)=>{
