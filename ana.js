@@ -26,10 +26,43 @@ let temp=null
 
 
 let anti=null
-
+let salida=[]
+let i=0
 m.forEach((e,index)=>{
-    
-    if (index == m.indexOf('aet', index)) ana.push(strs[index]) //funciona!
+
+    if (e!=anti) {
+
+        if (i>0) {
+
+            salida.forEach((s)=>{
+                if (s.includes(e)) {
+                    s.push(e)
+                    
+                } 
+            })
+            /* salida.forEach((s)=>{
+                if(s.includes(e)) {
+                    s.push(e)
+                } else {
+                    salida.push([])
+                    i=salida.length-1
+                    salida[i].push(e)
+                }
+            }) */
+
+        } else {
+            salida.push([])
+            i=salida.length-1
+            salida[i].push(e)
+        }
+
+    } else {
+        salida[i].push(e)
+    }
+    console.log(i, e, anti, salida);
+    anti=e
+    //i+=
+    //if (index == m.indexOf('aet', index)) ana.push(strs[index]) //funciona!
     //console.log(e, index)
     
     /* (e!=ant) ? console.log('distinto') : console.log('igual')
@@ -43,7 +76,7 @@ m.forEach((e,index)=>{
     console.log(e, index, ant) */
     
 })
-console.log(ana);
+//console.log(ana);
 /* let prev=""
 let grouped=[]
 const red=m.reduce((grouped, a, index)=>{
