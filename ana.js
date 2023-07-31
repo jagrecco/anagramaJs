@@ -31,6 +31,8 @@ let i=0
 
 m.forEach((e,index)=>{
 
+    console.log(`index ${index}`,i, e, anti, salida);
+
     if (e!=anti) {
 
         if (i>0) {
@@ -66,7 +68,7 @@ m.forEach((e,index)=>{
     } else {
         salida[i].push(e)
     }
-    console.log(`index ${index}`,i, e, anti, salida);
+
     anti=e
     
 })
