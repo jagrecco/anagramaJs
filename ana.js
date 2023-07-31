@@ -66,7 +66,7 @@ m.forEach((e,index)=>{
     } else {
         salida[i].push(e)
     }
-    console.log(i, e, anti, salida);
+    console.log(`index ${index}`,i, e, anti, salida);
     anti=e
     
 })
