@@ -23,21 +23,50 @@ let temp=null
 let anti=null
 let salida=[]
 let i=0
-
+let estaba=false
 m.forEach((e,index)=>{
 
+    /* if (e!=anti) {
+        if (i>0) { 
+            salida.forEach((s)=>{
+                if (s.includes(e)) {
+                    s.push(e)
+                    estaba=true
+                }
+            })
+            if (estaba==false) {
     
-    if (e!=anti) {
+                salida.push([])
+                i=salida.length-1
+                salida[i].push(e)
+                console.log(estaba)
+                estaba=false
+            }
+        }
+    } else {
+        if (i==0){
+            salida.push([])
+            i=salida.length-1
+        }
+        salida[i].push(e)
+    } */
+     if (e != anti) {
         
         if (i>0) {
 
             salida.forEach((s)=>{
                 
                 if (s.includes(e)) {
-                    s.push(e)                    
-                } 
+                    s.push(e)
+                    estaba=true
+                }
             })
-
+            if (estaba==false) {
+                console.log('cambio y no estaba');
+                salida.push([])
+                i=salida.length-1
+                salida[i].push(e)    
+            }
 
         } else {
             salida.push([])
@@ -51,5 +80,5 @@ m.forEach((e,index)=>{
     
     console.log(`index ${index}`, i, e, anti, salida);
     anti=e
-    
+    estaba=false
 })
