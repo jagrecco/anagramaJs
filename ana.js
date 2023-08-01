@@ -14,11 +14,6 @@ console.log(strs, m)
     console.log(acu)
 }, [])
 
-console.log(tt) */
-/* m.reduce((acum, curr, index)=>{
-
-}) */
-
 //act=[].push(curr)
 /* console.log(m.shift())
 console.log(m) */
@@ -31,10 +26,9 @@ let i=0
 
 m.forEach((e,index)=>{
 
-    console.log(`index ${index}`,i, e, anti, salida);
-
+    
     if (e!=anti) {
-
+        
         if (i>0) {
 
             salida.forEach((s)=>{
@@ -43,32 +37,19 @@ m.forEach((e,index)=>{
                     s.push(e)                    
                 } 
             })
-            /* if (tmp) {
-                tmp=false
-                salida.push([])
-                i=salida.length-1
-                salida[i].push(e)
-            } */
-            /* salida.forEach((s)=>{
-                if(s.includes(e)) {
-                    s.push(e)
-                } else {
-                    salida.push([])
-                    i=salida.length-1
-                    salida[i].push(e)
-                }
-            }) */
+
 
         } else {
             salida.push([])
             i=salida.length-1
             salida[i].push(e)
         }
-
+        
     } else {
         salida[i].push(e)
     }
-
+    
+    console.log(`index ${index}`, i, e, anti, salida);
     anti=e
     
 })
