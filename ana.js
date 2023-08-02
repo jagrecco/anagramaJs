@@ -1,5 +1,4 @@
 const strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
-const ana=[]
 const anagrama=[]
 const m=strs.map((e)=>(
   e.split('').sort().join(''))
@@ -22,34 +21,11 @@ let temp=null
 
 let anti=null
 let salida=[]
+let ana=[]
 let i=0
 let estaba=false
-m.forEach((e,index)=>{
+m.forEach((e, index)=>{
 
-    /* if (e!=anti) {
-        if (i>0) { 
-            salida.forEach((s)=>{
-                if (s.includes(e)) {
-                    s.push(e)
-                    estaba=true
-                }
-            })
-            if (estaba==false) {
-    
-                salida.push([])
-                i=salida.length-1
-                salida[i].push(e)
-                console.log(estaba)
-                estaba=false
-            }
-        }
-    } else {
-        if (i==0){
-            salida.push([])
-            i=salida.length-1
-        }
-        salida[i].push(e)
-    } */
      if (e != anti) {
         
         if (i>0) {
@@ -58,27 +34,41 @@ m.forEach((e,index)=>{
                 
                 if (s.includes(e)) {
                     s.push(e)
+                    //ana.push(strs[index])
+                    console.log("strs",strs[index], index);
+                    //s.push(strs[index])
                     estaba=true
                 }
             })
             if (estaba==false) {
                 console.log('cambio y no estaba');
                 salida.push([])
+                ana.push([])
                 i=salida.length-1
-                salida[i].push(e)    
+                salida[i].push(e)
+                //ana[i].push(strs[index])
+                console.log("strs",strs[index], index);
+                //salida[i].push(strs[index])
             }
 
         } else {
             salida.push([])
+            ana.push([])
             i=salida.length-1
             salida[i].push(e)
+            //ana[i].push(strs[index])
+            console.log("strs",strs[index], index);
+            //salida[i].push(strs[index])
         }
         
     } else {
         salida[i].push(e)
+        //ana[i].push(strs[index])
+        console.log("strs",strs[index], index);
+        //salida[i].push(strs[index])
     }
     
-    console.log(`index ${index}`, i, e, anti, salida);
+    console.log(`index ${index}`, i, e, anti, salida, ana);
     anti=e
     estaba=false
 })
