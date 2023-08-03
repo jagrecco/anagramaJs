@@ -34,7 +34,7 @@ m.forEach((e, index)=>{
                 
                 if (s.includes(e)) {
                     s.push(e)
-                    //ana.push(strs[index])
+                    ana[i].push(strs[index])
                     console.log("strs",strs[index], index);
                     //s.push(strs[index])
                     estaba=true
@@ -46,7 +46,7 @@ m.forEach((e, index)=>{
                 ana.push([])
                 i=salida.length-1
                 salida[i].push(e)
-                //ana[i].push(strs[index])
+                ana[i].push(strs[index])
                 console.log("strs",strs[index], index);
                 //salida[i].push(strs[index])
             }
@@ -56,14 +56,14 @@ m.forEach((e, index)=>{
             ana.push([])
             i=salida.length-1
             salida[i].push(e)
-            //ana[i].push(strs[index])
+            ana[i].push(strs[index])
             console.log("strs",strs[index], index);
             //salida[i].push(strs[index])
         }
         
     } else {
         salida[i].push(e)
-        //ana[i].push(strs[index])
+        ana[i].push(strs[index])
         console.log("strs",strs[index], index);
         //salida[i].push(strs[index])
     }
