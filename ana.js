@@ -30,11 +30,11 @@ m.forEach((e, index)=>{
         
         if (i>0) {
 
-            salida.forEach((s)=>{
+            salida.forEach((s, index2)=>{
                 
                 if (s.includes(e)) {
                     s.push(e)
-                    ana[i].push(strs[index])
+                    ana[index2].push(strs[index])
                     console.log("strs",strs[index], index);
                     //s.push(strs[index])
                     estaba=true
