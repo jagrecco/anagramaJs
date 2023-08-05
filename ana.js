@@ -5,17 +5,12 @@
 
 const strs=[  "abccdedeff", "fefdcbdeca", "ddafbceefc", "ecffeddcab", "efadcffcbe",   "cbefedfadc", "feefcadcbd", "dcbfedfcea", "cdfeeabdfc", "ccfbdeffea",   "edfbdcfaec", "eacffedbdc", "decffebcda", "acfdecdbef", "fedfbcaecf",   "bfcadceefd", "fedfceacbd", "fbeecfadcd", "eddcfecfab", "afdefcbced",   "ebfdecfdca", "eefdcbcfad", "fcaefdcdbe", "ebfdcaeffd", "ebfcadecdf",   "ccfdefeabd", "fdecbaefcd", "cdfafbeced", "bcfeedfdac", "abcfdecfed",   "aefddccfbe", "aecbfdcedf", "debcdceaff", "effbdcdeac", "efbedcfadc",   "eedefccfab", "bceddfecaf", "dcbdefaefc", "bdcfecdafe", "decfcadfeb",   "cedfcbadfe", "defaecbfcd", "ccfeedfbad", "ebcacfdfed", "bedfcdeafc",   "dffcecbade", "fecdbdface", "ffdeedabcc", "eefcaddfcb", "fcefbadced"]
 
-const anagrama=[]
 const m=strs.map((e)=>(
   e.split('').sort().join(''))
 )
 
-//explanation https://delacruz.dev/blog/funcion-reduce-javascript
 
 console.log(strs, m)
-
-let temp=null
-
 
 let anti=null
 let salida=[]
